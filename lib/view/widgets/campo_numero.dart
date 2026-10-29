@@ -1,12 +1,14 @@
-// CampoNumero
-
 import 'package:flutter/material.dart';
 
 class CampoNumero extends StatelessWidget {
   final String etiqueta;
   final TextEditingController controller;
 
-  CampoNumero({required this.etiqueta, required this.controller});
+  const CampoNumero({
+    super.key,
+    required this.etiqueta,
+    required this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class CampoNumero extends StatelessWidget {
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
         labelText: etiqueta,
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
       ),
     );
   }
